@@ -1,2 +1,2 @@
-# gb_py_basics
-GeekBrains Python Basics
+# Основы Python
+Для выполнения задания необходимо запустить main.py сдвумя параметрами int.
