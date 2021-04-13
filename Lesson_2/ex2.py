@@ -11,7 +11,7 @@ def elements_exchange():
                 array[index], array[index + 1] = array[index + 1], array[index]
         except IndexError:
             break
-    print(array)
+    return array
 
 
 if __name__ == "__main__":
