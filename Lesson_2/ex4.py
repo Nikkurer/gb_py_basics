@@ -1,26 +1,13 @@
-def get_number():
-    message = 'Введите натуральное число: '
-    element = input(message)
-    if not element.isnumeric():
-        print('ОШИБКА! Вы ввели некорректные данные!')
-        exit(1)
-    return int(element)
+def get_string():
+    message = 'Введите строку из нескольких слов: '
+    return input(message).split()
 
 
-def rating():
-    numbers = [7, 5, 3, 3, 2]
-    number = get_number()
-    for element in numbers:
-        if element < number:
-            index = numbers.index(element)
-            break
-        elif element == number:
-            index = numbers.index(element)
-        else:
-            index = numbers.index(element) + 1
-    numbers.insert(index, number)
-    return numbers
+def print_words():
+    array = get_string()
+    for element in enumerate(array):
+        print(f'{element[0] + 1}\t{element[1]:10}')
 
 
 if __name__ == '__main__':
-    rating()
+    print_words()
