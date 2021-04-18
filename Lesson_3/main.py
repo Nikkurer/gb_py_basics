@@ -1,6 +1,7 @@
 import ex1
+import ex3
+import ex4
 from ex2 import print_user_info
-from ex3 import my_func
 
 numbers = (5, 2)
 print(f'Задание 1:\n{ex1.devision(*numbers)}\n')
@@ -15,4 +16,6 @@ print_user_info(name=user['имя'], surname=user['фамилия'],
                 phone_number=user['телефон'])
 print('\n')
 
-print(f'Задание 3:\n{my_func(-3, -5, 2)}')
+print(f'Задание 3:\n{ex3.my_func(-3, -5, 2)}\n')
+
+print(f'Задание 3:\n{ex4.my_func(2, -5)}')
