@@ -4,6 +4,10 @@
 # вывод данных о пользователе одной строкой.
 
 def print_user_info(**fields):
+    """
+    Выводит данные о пользователе в одну строку
+    :param fields: данные о пользователе
+    """
     output = ''
     for field, value in fields.items():
         output = f'{output}{field}: {value} '
