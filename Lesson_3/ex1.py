@@ -2,7 +2,13 @@
 # выполняющую их деление. Числа запрашивать у пользователя, предусмотреть
 # обработку ситуации деления на ноль.
 
-def devision(dividend, divider):
+def devision(dividend: float, divider: float) -> Union(float, string):
+    """
+    Делит первый параметр на второй.
+    :param dividend:
+    :param divider:
+    :returns: Частное от деления первого параметра на второй
+    """
     try:
         return dividend / divider
     except ZeroDivisionError:
