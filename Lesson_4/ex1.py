@@ -15,5 +15,3 @@ if __name__ == '__main__':
     rate = float(sys.argv[2])
     premium = float(sys.argv[3])
     print(salary(hours_worked, rate, premium))
-
-    print(lambda )
