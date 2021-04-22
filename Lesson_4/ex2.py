@@ -15,4 +15,6 @@ def new_list(orig):
 
 
 original_list = [random.randint(1, 200) for _ in range(list_len)]
-print(new_list(original_list))
+
+if __name__ == '__main__':
+    print(new_list(original_list))
