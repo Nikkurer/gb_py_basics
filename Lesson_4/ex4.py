@@ -12,8 +12,6 @@ def unique_list(orig):
     return [number for number in orig if orig.count(number) == 1]
 
 
-original_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
-
 if __name__ == '__main__':
     orig_len = 40
     original_list = [random.randint(0, 20) for _ in range(orig_len)]
