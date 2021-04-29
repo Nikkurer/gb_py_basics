@@ -4,3 +4,6 @@
 # Подсказка: использовать функцию range() и генератор.
 
 result = [num for num in range(20, 241) if num % 20 == 0 or num % 21 == 0]
+
+if __name__ == '__main__':
+    print(result)
