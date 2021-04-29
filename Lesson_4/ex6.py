@@ -10,31 +10,17 @@
 # а при достижении числа 10 завершаем цикл. Во втором также необходимо
 # предусмотреть условие, при котором повторение элементов списка будет
 # прекращено.
-from itertools import count
-
-
-def user_input() -> tuple:
-    """
-    Получает от пользователя начало и конец последовательности и
-    приводит их к типу int.
-    :return:
-    Два введённых числа
-    """
-    numbers = None
-    message = 'Введите начало и конец последовательности через пробел: '
-    while not numbers:
-        raw_numbers = input(message).split()
-        try:
-            numbers = tuple(map(int, raw_numbers))
-        except ValueError:
-            print(f'Ошибка: {raw_numbers} не являются целыми числами')
-            continue
-    return numbers
-
+from itertools import count, cycle
 
 if __name__ == '__main__':
-    start, end = user_input()
+    numbers = []
+    start, end = 2, 10
     for num in count(start):
-        print(num)
+        numbers.append(num)
         if num >= end:
+            break
+    print(numbers)
+    for number in cycle(numbers):
+        print(number)
+        if number == max(numbers):
             break
