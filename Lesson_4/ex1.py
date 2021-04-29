@@ -11,6 +11,9 @@ def salary(x, y, z):
 
 
 if __name__ == '__main__':
+    if len(sys.argv) < 4:
+        print(f'Укажите параметры зарплата, выработка, ставка')
+        exit(1)
     hours_worked = float(sys.argv[1])
     rate = float(sys.argv[2])
     premium = float(sys.argv[3])
