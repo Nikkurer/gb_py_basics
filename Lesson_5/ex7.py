@@ -23,6 +23,7 @@
 import json
 
 with open('ex7.txt', 'r', encoding='utf-8') as input_file:
+    profit_companies = 0
     balance_sum = 0
     companies_dict = {}
     for line in input_file:
@@ -33,8 +34,9 @@ with open('ex7.txt', 'r', encoding='utf-8') as input_file:
         balance = company_proceed - company_costs
         if balance > 0:
             balance_sum += balance
+            profit_companies += 1
         companies_dict[company_name] = balance
-average_profit = {"average_profit": balance_sum / len(companies_dict)}
+average_profit = {"average_profit": balance_sum / profit_companies}
 companies_list = [companies_dict, average_profit]
 with open('ex7_out.txt', 'wt', encoding='utf-8') as output_file:
     output_file.write(json.dumps(companies_list, ensure_ascii=False, indent=4))
