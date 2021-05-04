@@ -13,7 +13,7 @@ result = ''
 salary_min = 20000
 salary_sum = 0
 
-with open('surnames.txt', mode='rt', encoding='utf-8') as file:
+with open('ex3.txt', mode='rt', encoding='utf-8') as file:
     employees = tuple(file.readlines())
     employee_number = random.randint(10, 20)
     print('Сотрудники с окладом менее 20000:')
