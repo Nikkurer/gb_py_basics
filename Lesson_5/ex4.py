@@ -11,11 +11,11 @@
 numerals = ('Один', 'Два', 'Три', 'Четыре')
 result = ''
 
-with open('ex4.txt', 'r', encoding='utf-8') as file:
-    for line in file.readlines():
+with open('ex4.txt', 'r', encoding='utf-8') as input_file:
+    for line in input_file:
         numeral, number = line.split('-')
         number = int(number)
         result = f'{result}{numerals[number - 1]} - {number}\n'
 
-with open('ex4_rus.txt', 'wt', encoding='utf-8') as file:
-    file.write(result)
+with open('ex4_rus.txt', 'wt', encoding='utf-8') as output_file:
+    output_file.write(result)
