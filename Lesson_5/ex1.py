@@ -7,9 +7,7 @@ filename = 'user_data.txt'
 with open(filename, mode='wt', encoding='utf-8') as f:
     while True:
         user_data = input('Введите данные: ')
-        if user_data != '':
-            f.write(user_data)
-            f.flush()
-        else:
+        if not user_data:
             break
-        f.write('\n')
+        f.write(f'{user_data}\n')
+        f.flush()
