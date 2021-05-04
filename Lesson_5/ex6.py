@@ -21,6 +21,8 @@ def sum_hours(data: tuple):
 catalog = {}
 with open('ex6.txt', 'rt', encoding='utf-8') as input_file:
     for line in input_file:
-        subject_tmp = tuple(line.split())
-        catalog[subject_tmp[0]] = sum_hours(subject_tmp[1:])
+        subject_raw = tuple(line.split())
+        subject_name = subject_raw[0]
+        subject_hours_raw = subject_raw[1:]
+        catalog[subject_name] = sum_hours(subject_hours_raw)
 print(catalog)
