@@ -16,4 +16,4 @@ def my_func(num1: float, num2: float, num3: float) -> float:
 
 
 if __name__ == '__main__':
-    my_func(1, 2, 3)
+    print(my_func(1, 2, 3))
