@@ -57,18 +57,18 @@ class SportCar(Car):
 
 if __name__ == '__main__':
     town = TownCar('Luigi')
-    town.go(50)
+    town.go(70)
     town.show_speed()
     town.speed = 40
     town.turn('left')
     town.stop()
     print()
     police = PoliceCar('Sheriff')
-    town.go(70)
-    town.show_speed()
-    town.speed = 30
-    town.turn('right')
-    town.stop()
+    police.go(70)
+    police.show_speed()
+    police.speed = 30
+    police.turn('right')
+    police.stop()
     print()
     sport = SportCar('Lightning McQuen')
     sport.go(90)
