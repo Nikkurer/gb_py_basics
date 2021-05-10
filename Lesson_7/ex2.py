@@ -11,13 +11,18 @@
 # Реализовать общий подсчет расхода ткани. Проверить на практике полученные
 # на этом уроке знания: реализовать абстрактные классы для основных классов
 # проекта, проверить на практике работу декоратора @property.
+from abc import abstractmethod
+
 
 class Clothes:
     name: str
-    fabric_amount: float
 
     def __init__(self, name):
         self.name = name
+
+    @abstractmethod
+    def fabric_amount(self):
+        pass
 
 
 class Coat(Clothes):
@@ -27,9 +32,9 @@ class Coat(Clothes):
         super().__init__(name)
         self.size = size
 
-    def get_fabric_amount(self):
-        self.fabric_amount = self.size / 6.5 + 0.5
-        return self.fabric_amount
+    @property
+    def fabric_amount(self):
+        return self.size / 6.5 + 0.5
 
 
 class Suite(Clothes):
@@ -39,17 +44,17 @@ class Suite(Clothes):
         super().__init__(name)
         self.height = height
 
-    def get_fabric_amount(self):
-        self.fabric_amount = self.height * 2 + 0.3
-        return self.fabric_amount
+    @property
+    def fabric_amount(self):
+        return self.height * 2 + 0.3
 
 
 if __name__ == '__main__':
     suite = Suite('костюм', 1.83)
-    print(f'На {suite.name} необходимо {suite.get_fabric_amount():.2f} '
+    print(f'На {suite.name} необходимо {suite.fabric_amount:.2f} '
           f'метров ткани')
     coat = Coat('шинель', 52)
-    print(f'На {coat.name} необходимо {coat.get_fabric_amount():.2f} '
+    print(f'На {coat.name} необходимо {coat.fabric_amount:.2f} '
           f'метров ткани')
     print(f'Всего понадобится {suite.fabric_amount + coat.fabric_amount} '
           f'метров ткани')
