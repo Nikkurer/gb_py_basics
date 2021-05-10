@@ -46,8 +46,10 @@ class Suite(Clothes):
 
 if __name__ == '__main__':
     suite = Suite('костюм', 1.83)
-    print(f'Для пошива {suite.name} необходимо {suite.get_fabric_amount():.2f} '
+    print(f'На {suite.name} необходимо {suite.get_fabric_amount():.2f} '
           f'метров ткани')
     coat = Coat('шинель', 52)
-    print(f'Для пошива {coat.name} необходимо {coat.get_fabric_amount():.2f} '
+    print(f'На {coat.name} необходимо {coat.get_fabric_amount():.2f} '
+          f'метров ткани')
+    print(f'Всего понадобится {suite.fabric_amount + coat.fabric_amount} '
           f'метров ткани')
